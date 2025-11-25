@@ -1,0 +1,214 @@
+.admin-body {
+    background: radial-gradient(circle at top, rgba(61, 240, 255, 0.05), transparent 55%);
+}
+
+.admin-main {
+    padding-bottom: 4rem;
+}
+
+.admin-header .header-right {
+    gap: 1.5rem;
+}
+
+.last-sync {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: right;
+}
+
+.last-sync span {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.last-sync strong {
+    font-size: 1rem;
+    color: var(--pure-white);
+}
+
+.admin-stats-grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.admin-stat-card {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+
+    /* fundo escuro + glow leve */
+    background: linear-gradient(145deg, rgba(10, 20, 35, 0.85), rgba(5, 10, 20, 0.75));
+    border: 1px solid rgba(61, 240, 255, 0.25);
+
+    border-radius: 1.25rem;
+    box-shadow:
+            0 25px 45px rgba(0, 0, 0, 0.45),
+            0 0 25px rgba(61, 240, 255, 0.15);
+
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.admin-stat-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(61, 240, 255, 0.18), transparent 55%);
+    pointer-events: none;
+}
+
+.admin-stat-card span {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.admin-stat-card strong {
+    font-size: 2.2rem;
+    font-family: 'Orbitron', sans-serif;
+    color: var(--pure-white);
+    text-shadow: 0 0 10px rgba(61, 240, 255, 0.6);
+}
+
+/* Subtexto (ex: “hoje”, “+0 nesta semana”) */
+.admin-stat-card small {
+    font-size: 0.85rem;
+    color: rgba(61, 240, 255, 0.7);
+}
+
+.admin-card {
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: rgba(5, 5, 5, 0.6);
+    border: 1px solid rgba(61, 240, 255, 0.15);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(20px);
+}
+
+.admin-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.admin-card-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.admin-card-header p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.admin-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.admin-filter {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.admin-filter select {
+    margin-top: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(61, 240, 255, 0.4);
+    background: rgba(5, 5, 5, 0.6);
+    color: var(--pure-white);
+}
+
+.admin-table-wrapper {
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 0.85rem 1rem;
+    text-align: left;
+}
+
+.admin-table thead th {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.admin-table tbody tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.admin-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.admin-table tbody tr:hover {
+    background: rgba(61, 240, 255, 0.05);
+}
+
+.admin-role-badge {
+    display: inline-flex;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    border: 1px solid rgba(61, 240, 255, 0.4);
+    color: var(--pure-white);
+}
+
+.admin-role-badge.admin {
+    border-color: rgba(255, 90, 130, 0.6);
+    color: #ff5a82;
+}
+
+.table-placeholder {
+    text-align: center;
+    padding: 2rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.score-pill {
+    display: inline-flex;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.75rem;
+    background: rgba(61, 240, 255, 0.1);
+    border: 1px solid rgba(61, 240, 255, 0.2);
+    font-size: 0.8rem;
+}
+
+.score-pill span {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 1024px) {
+    .admin-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .admin-card-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+

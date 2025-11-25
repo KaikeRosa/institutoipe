@@ -1,0 +1,303 @@
+[
+  {
+    "id": 1,
+    "text": "Quando surge um problema no trabalho, você geralmente:",
+    "options": [
+      { "text": "Assume o controle e busca resolver imediatamente", "value": "D" },
+      { "text": "Conversa com colegas para encontrar soluções juntos", "value": "I" },
+      { "text": "Aguarda para entender melhor a situação antes de agir", "value": "S" },
+      { "text": "Analisa todos os aspectos cuidadosamente", "value": "C" }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Em reuniões, seu comportamento é mais:",
+    "options": [
+      { "text": "Direto ao ponto, focado em decisões", "value": "D" },
+      { "text": "Animado, gosta de contar histórias", "value": "I" },
+      { "text": "Paciente, ouve mais do que fala", "value": "S" },
+      { "text": "Analítico, baseado em dados", "value": "C" }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Você prefere ambientes de trabalho que são:",
+    "options": [
+      { "text": "Desafiadores e dinâmicos", "value": "D" },
+      { "text": "Sociais e colaborativos", "value": "I" },
+      { "text": "Estáveis e previsíveis", "value": "S" },
+      { "text": "Organizados e estruturados", "value": "C" }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Quando precisa convencer alguém, você:",
+    "options": [
+      { "text": "Apresenta fatos concretos e resultados", "value": "D" },
+      { "text": "Cria entusiasmo e mostra benefícios", "value": "I" },
+      { "text": "Escuta primeiro para entender a outra pessoa", "value": "S" },
+      { "text": "Prepara argumentos lógicos e dados", "value": "C" }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Seu ritmo de trabalho é mais:",
+    "options": [
+      { "text": "Rápido e intenso", "value": "D" },
+      { "text": "Variável, com altos e baixos", "value": "I" },
+      { "text": "Constante e estável", "value": "S" },
+      { "text": "Metódico e preciso", "value": "C" }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Ao receber feedback, você:",
+    "options": [
+      { "text": "Foca no que pode melhorar para resultados", "value": "D" },
+      { "text": "Agradece e usa como oportunidade para conversar", "value": "I" },
+      { "text": "Reflete calmamente sobre os pontos mencionados", "value": "S" },
+      { "text": "Analisa criteriosamente cada item", "value": "C" }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Em projetos em grupo, você costuma:",
+    "options": [
+      { "text": "Assumir a liderança naturalmente", "value": "D" },
+      { "text": "Animar o grupo e manter o clima leve", "value": "I" },
+      { "text": "Contribuir de forma consistente e cooperativa", "value": "S" },
+      { "text": "Organizar os processos e detalhes", "value": "C" }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Quando as coisas não saem como planejado:",
+    "options": [
+      { "text": "Adapto-me rapidamente e busco alternativas", "value": "D" },
+      { "text": "Vejo o lado positivo e animo os outros", "value": "I" },
+      { "text": "Mantenho a calma e sigo em frente", "value": "S" },
+      { "text": "Reavalio o plano com mais cuidado", "value": "C" }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Seu estilo de comunicação é mais:",
+    "options": [
+      { "text": "Objetivo e direto", "value": "D" },
+      { "text": "Expressivo e entusiasmado", "value": "I" },
+      { "text": "Diplomático e ponderado", "value": "S" },
+      { "text": "Detalhado e preciso", "value": "C" }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "O que mais te motiva no trabalho?",
+    "options": [
+      { "text": "Desafios e oportunidades de liderança", "value": "D" },
+      { "text": "Reconhecimento e interação com pessoas", "value": "I" },
+      { "text": "Ambiente harmonioso e estável", "value": "S" },
+      { "text": "Problemas complexos que exigem análise", "value": "C" }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Ao lidar com prazos:",
+    "options": [
+      { "text": "Adianto-me para terminar antes", "value": "D" },
+      { "text": "Trabalho melhor sob pressão", "value": "I" },
+      { "text": "Sigo um ritmo constante", "value": "S" },
+      { "text": "Planejo cada etapa com antecedência", "value": "C" }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Em situações de conflito:",
+    "options": [
+      { "text": "Enfrento diretamente para resolver rápido", "value": "D" },
+      { "text": "Busco mediar e manter boas relações", "value": "I" },
+      { "text": "Procuro acalmar os ânimos", "value": "S" },
+      { "text": "Analiso os fatos antes de agir", "value": "C" }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Sobre regras e procedimentos:",
+    "options": [
+      { "text": "São úteis se não atrapalharem os resultados", "value": "D" },
+      { "text": "Podem ser adaptadas conforme a situação", "value": "I" },
+      { "text": "Devem ser seguidas para manter a ordem", "value": "S" },
+      { "text": "Existem por razões lógicas e devem ser rigorosamente aplicadas", "value": "C" }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Seu maior medo profissional é:",
+    "options": [
+      { "text": "Ficar estagnado sem desafios", "value": "D" },
+      { "text": "Ser ignorado ou não reconhecido", "value": "I" },
+      { "text": "Mudanças bruscas e imprevisíveis", "value": "S" },
+      { "text": "Cometer erros por falta de informação", "value": "C" }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Ao aprender algo novo, você prefere:",
+    "options": [
+      { "text": "Aprender fazendo na prática", "value": "D" },
+      { "text": "Discutir com outras pessoas", "value": "I" },
+      { "text": "Ter instruções claras e passo a passo", "value": "S" },
+      { "text": "Estudar a fundo antes de tentar", "value": "C" }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Quando delega tarefas, você:",
+    "options": [
+      { "text": "Define o resultado esperado e deixa a pessoa decidir como fazer", "value": "D" },
+      { "text": "Explica com entusiasmo e motiva a equipe", "value": "I" },
+      { "text": "Fornece orientações claras e apoio constante", "value": "S" },
+      { "text": "Especifica exatamente como a tarefa deve ser executada", "value": "C" }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Em eventos sociais no trabalho:",
+    "options": [
+      { "text": "Participo se for estratégico para meus objetivos", "value": "D" },
+      { "text": "Sou o centro das atenções e animo o grupo", "value": "I" },
+      { "text": "Converso com pessoas conhecidas em pequenos grupos", "value": "S" },
+      { "text": "Prefiro conversas profundas com poucas pessoas", "value": "C" }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Sobre riscos:",
+    "options": [
+      { "text": "São necessários para grandes conquistas", "value": "D" },
+      { "text": "Tornam a vida mais emocionante", "value": "I" },
+      { "text": "Devem ser calculados e minimizados", "value": "S" },
+      { "text": "Devem ser evitados a menos que totalmente compreendidos", "value": "C" }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Quando alguém discorda de você:",
+    "options": [
+      { "text": "Enfrento o debate com argumentos fortes", "value": "D" },
+      { "text": "Tento encontrar pontos em comum", "value": "I" },
+      { "text": "Ouço atentamente para entender sua perspectiva", "value": "S" },
+      { "text": "Apresento dados e fatos para sustentar minha posição", "value": "C" }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Sua abordagem para tomar decisões é:",
+    "options": [
+      { "text": "Rápida e intuitiva", "value": "D" },
+      { "text": "Influenciada por como as pessoas serão impactadas", "value": "I" },
+      { "text": "Cautelosa e ponderada", "value": "S" },
+      { "text": "Baseada em análise detalhada de informações", "value": "C" }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Quando trabalha sob pressão:",
+    "options": [
+      { "text": "Fico mais focado e produtivo", "value": "D" },
+      { "text": "Busco apoio da equipe para dividir a carga", "value": "I" },
+      { "text": "Mantenho a calma e sigo meu ritmo", "value": "S" },
+      { "text": "Verifico cada detalhe para evitar erros", "value": "C" }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Seu processo criativo é mais:",
+    "options": [
+      { "text": "Prático e orientado a soluções", "value": "D" },
+      { "text": "Colaborativo e cheio de ideias", "value": "I" },
+      { "text": "Lento e gradual, com refinamento constante", "value": "S" },
+      { "text": "Analítico e baseado em dados", "value": "C" }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Ao receber uma nova tarefa:",
+    "options": [
+      { "text": "Parto logo para a ação", "value": "D" },
+      { "text": "Compartilho ideias com outros antes de começar", "value": "I" },
+      { "text": "Organizo um plano antes de iniciar", "value": "S" },
+      { "text": "Pesquiso tudo sobre o assunto primeiro", "value": "C" }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "Quando alguém comete um erro:",
+    "options": [
+      { "text": "Aponto imediatamente para corrigir", "value": "D" },
+      { "text": "Dou feedback de forma encorajadora", "value": "I" },
+      { "text": "Espero o momento adequado para conversar", "value": "S" },
+      { "text": "Analiso o erro em detalhes antes de comentar", "value": "C" }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "Sobre multitarefa:",
+    "options": [
+      { "text": "Lido bem com várias coisas ao mesmo tempo", "value": "D" },
+      { "text": "Gosto da variedade, mas posso me dispersar", "value": "I" },
+      { "text": "Prefiro focar em uma coisa de cada vez", "value": "S" },
+      { "text": "Só faço multitarefa se puder manter o padrão de qualidade", "value": "C" }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "Ao apresentar ideias:",
+    "options": [
+      { "text": "Foco nos resultados e benefícios práticos", "value": "D" },
+      { "text": "Uso histórias e exemplos envolventes", "value": "I" },
+      { "text": "Apresento de forma clara e passo a passo", "value": "S" },
+      { "text": "Incluo dados e evidências de suporte", "value": "C" }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "Sua mesa de trabalho tende a ser:",
+    "options": [
+      { "text": "Funcional com o essencial à mão", "value": "D" },
+      { "text": "Um pouco desorganizada, mas criativa", "value": "I" },
+      { "text": "Arrumada e com tudo em seu lugar", "value": "S" },
+      { "text": "Meticulosamente organizada com sistemas", "value": "C" }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "Quando trabalha em equipe, você valoriza:",
+    "options": [
+      { "text": "Eficiência e atingir metas", "value": "D" },
+      { "text": "Criatividade e bom relacionamento", "value": "I" },
+      { "text": "Cooperação e harmonia", "value": "S" },
+      { "text": "Precisão e qualidade do trabalho", "value": "C" }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "Sobre mudanças na empresa:",
+    "options": [
+      { "text": "Aproveito as oportunidades que trazem", "value": "D" },
+      { "text": "Animo os colegas a encarar positivamente", "value": "I" },
+      { "text": "Preciso de tempo para me adaptar", "value": "S" },
+      { "text": "Analiso cuidadosamente os prós e contras", "value": "C" }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "Seu maior orgulho profissional é:",
+    "options": [
+      { "text": "Conquistar resultados expressivos", "value": "D" },
+      { "text": "Ter uma rede de contatos valiosa", "value": "I" },
+      { "text": "Manter relações duradouras e de confiança", "value": "S" },
+      { "text": "Dominar completamente minha área de atuação", "value": "C" }
+    ]
+  }
+]
+

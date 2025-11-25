@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Instituto IPÊ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="dashboard-body">
+    <!-- Particles Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <div class="logo-icon">IPÊ</div>
+                <span>Instituto IPÊ</span>
+            </div>
+
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+                </svg>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="admin.html" class="nav-item" id="admin-link" style="display: none;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M12 1l9 4v6c0 5.25-3.5 10.74-9 12-5.5-1.26-9-6.75-9-12V5l9-4z"/><circle cx="12" cy="11" r="3"/>
+                </svg>
+                <span>Administração</span>
+            </a>
+        </nav>
+
+        <a href="index.html" class="nav-item" id="logout-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/>
+                </svg>
+            <span>Sair</span>
+        </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <!-- Top Bar -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <button class="menu-toggle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
+                <div class="header-welcome">
+                    <h1 id="welcome-title">Bem-vindo de volta!</h1>
+                    <p id="welcome-subtitle">Acompanhe seu perfil DISC atualizado</p>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <button class="header-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                    </svg>
+                    <span class="notification-badge">3</span>
+                </button>
+
+                <div class="user-profile" id="user-profile-card">
+                    <div class="user-avatar">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name" id="dashboard-user-name">Usuário IPÊ</span>
+                        <span class="user-role" id="dashboard-user-role">Perfil DISC</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <!-- Quick Stats -->
+            <div class="stats-grid">
+                <div class="stat-card holographic-card">
+                    <div class="stat-icon" style="--stat-color: #3DF0FF;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="stat-tests">0</div>
+                        <div class="stat-label">Testes Realizados</div>
+                    </div>
+                </div>
+
+                <div class="stat-card holographic-card">
+                    <div class="stat-icon" style="--stat-color: #A43DFF;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="stat-profile">--</div>
+                        <div class="stat-label">Perfil Dominante</div>
+                    </div>
+                </div>
+
+                <div class="stat-card holographic-card">
+                    <div class="stat-icon" style="--stat-color: #00E5F6;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="stat-confidence">0%</div>
+                        <div class="stat-label">Confiança</div>
+                    </div>
+                </div>
+
+                <div class="stat-card holographic-card">
+                    <div class="stat-icon" style="--stat-color: #3DFFB8;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="stat-evolution">0%</div>
+                        <div class="stat-label">Evolução</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main DISC Report -->
+            <div class="report-grid">
+                <!-- Radar Chart -->
+                <div class="report-card holographic-card">
+                    <div class="report-header">
+                        <h2>Seu Perfil DISC</h2>
+                        <div class="report-actions">
+                            <button class="icon-btn" title="Atualizar">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                                </svg>
+                            </button>
+                            <button class="icon-btn" title="Download PDF">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="radar-chart-container">
+                        <svg viewBox="0 0 200 200" class="radar-svg">
+                            <!-- Grid -->
+                            <circle cx="100" cy="100" r="20" fill="none" stroke="#3DF0FF" stroke-width="0.5" opacity="0.2"/>
+                            <circle cx="100" cy="100" r="40" fill="none" stroke="#3DF0FF" stroke-width="0.5" opacity="0.2"/>
+                            <circle cx="100" cy="100" r="60" fill="none" stroke="#3DF0FF" stroke-width="0.5" opacity="0.2"/>
+                            <circle cx="100" cy="100" r="80" fill="none" stroke="#3DF0FF" stroke-width="0.5" opacity="0.2"/>
+                            <circle cx="100" cy="100" r="90" fill="none" stroke="#3DF0FF" stroke-width="0.5" opacity="0.2"/>
+                            
+                            <!-- Axes -->
+                            <line x1="100" y1="100" x2="100" y2="10" stroke="#3DF0FF" stroke-width="0.5" opacity="0.3"/>
+                            <line x1="100" y1="100" x2="190" y2="100" stroke="#3DF0FF" stroke-width="0.5" opacity="0.3"/>
+                            <line x1="100" y1="100" x2="100" y2="190" stroke="#3DF0FF" stroke-width="0.5" opacity="0.3"/>
+                            <line x1="100" y1="100" x2="10" y2="100" stroke="#3DF0FF" stroke-width="0.5" opacity="0.3"/>
+                            
+                            <!-- Labels -->
+                            <text x="100" y="5" text-anchor="middle" fill="#FF3D5A" font-size="16" font-weight="bold">D</text>
+                            <text x="195" y="105" text-anchor="start" fill="#FFE83D" font-size="16" font-weight="bold">I</text>
+                            <text x="100" y="200" text-anchor="middle" fill="#3DFFB8" font-size="16" font-weight="bold">S</text>
+                            <text x="5" y="105" text-anchor="middle" fill="#3DF0FF" font-size="16" font-weight="bold">C</text>
+                            
+                            <!-- Data polygon -->
+                            <polygon id="disc-polygon" points="100,68.5 131.5,100 120.2,100 86.5,100" fill="url(#radarGradient)" stroke="#3DF0FF" stroke-width="2" opacity="0.8"/>
+                            
+                            <!-- Data points -->
+                            <circle cx="100" cy="68.5" r="4" fill="#FF3D5A"><animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/></circle>
+                            <circle cx="131.5" cy="100" r="4" fill="#FFE83D"><animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/></circle>
+                            <circle cx="120.2" cy="100" r="4" fill="#3DFFB8"><animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/></circle>
+                            <circle cx="86.5" cy="100" r="4" fill="#3DF0FF"><animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/></circle>
+                            
+                            <defs>
+                                <linearGradient id="radarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#3DF0FF" stop-opacity="0.4"/>
+                                    <stop offset="100%" stop-color="#A43DFF" stop-opacity="0.4"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+
+                    <div class="disc-percentages">
+                        <div class="percentage-item" data-dimension="D" data-color="#FF3D5A">
+                            <div class="percentage-header">
+                                <span class="percentage-label">D - Dominância</span>
+                                <span class="percentage-value" data-dimension-value="D">0%</span>
+                            </div>
+                            <div class="percentage-bar-container">
+                                <div class="percentage-bar-fill"></div>
+                            </div>
+                        </div>
+
+                        <div class="percentage-item" data-dimension="I" data-color="#FFE83D">
+                            <div class="percentage-header">
+                                <span class="percentage-label">I - Influência</span>
+                                <span class="percentage-value" data-dimension-value="I">0%</span>
+                            </div>
+                            <div class="percentage-bar-container">
+                                <div class="percentage-bar-fill"></div>
+                            </div>
+                        </div>
+
+                        <div class="percentage-item" data-dimension="S" data-color="#3DFFB8">
+                            <div class="percentage-header">
+                                <span class="percentage-label">S - Estabilidade</span>
+                                <span class="percentage-value" data-dimension-value="S">0%</span>
+                            </div>
+                            <div class="percentage-bar-container">
+                                <div class="percentage-bar-fill"></div>
+                            </div>
+                        </div>
+
+                        <div class="percentage-item" data-dimension="C" data-color="#3DF0FF">
+                            <div class="percentage-header">
+                                <span class="percentage-label">C - Conformidade</span>
+                                <span class="percentage-value" data-dimension-value="C">0%</span>
+                            </div>
+                            <div class="percentage-bar-container">
+                                <div class="percentage-bar-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analysis -->
+                <div class="report-card holographic-card">
+                    <div class="report-header">
+                        <h2>Análise Detalhada</h2>
+                    </div>
+
+                    <div class="analysis-content">
+                        <div class="analysis-section">
+                            <h3 style="color: #3DF0FF;" id="analysis-profile">Conclua um teste para ver seu perfil</h3>
+                            <p id="analysis-summary">Assim que você finalizar um teste DISC, sua análise completa aparecerá aqui.</p>
+                        </div>
+
+                        <div class="analysis-section">
+                            <h4>Pontos Fortes</h4>
+                            <ul class="traits-list" id="strengths-list">
+                                <li>Faça o teste para desbloquear seus pontos fortes.</li>
+                            </ul>
+                        </div>
+
+                        <div class="analysis-section">
+                            <h4>Áreas de Desenvolvimento</h4>
+                            <ul class="traits-list" id="development-list">
+                                <li>Os focos de evolução aparecerão após o próximo teste.</li>
+                            </ul>
+                        </div>
+
+                        <div class="analysis-section">
+                            <h4>Carreiras Ideais</h4>
+                            <div class="careers-grid" id="careers-list">
+                                <span class="career-tag">Execute um teste para ver sugestões</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Tests & Evolution Chart -->
+            <div class="secondary-grid">
+                <!-- Recent Tests -->
+                <div class="report-card holographic-card">
+                    <div class="report-header">
+                        <h2>Histórico de Testes</h2>
+                        <button class="btn-link">Ver todos</button>
+                    </div>
+
+                    <div class="tests-list" id="tests-list"></div>
+                    <p class="empty-state" id="tests-empty" style="display: none;">Ainda não há testes registrados. Clique em "Novo Teste" para começar.</p>
+
+                    <button class="btn-primary full-width" id="new-test-btn" style="margin-top: 1.5rem;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>
+                        </svg>
+                        Novo Teste
+                    </button>
+                </div>
+
+                <!-- Recommendations -->
+                <div class="report-card holographic-card">
+                    <div class="report-header">
+                        <h2>Recomendações</h2>
+                    </div>
+
+                    <div class="recommendations-list" id="recommendations-list">
+                        <p class="empty-state">Finalize um teste para receber recomendações personalizadas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="api-client.js"></script>
+    <script src="script.js"></script>
+    <script src="dashboard-script.js"></script>
+</body>
+
+</html>

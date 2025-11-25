@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração - Instituto IPÊ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="dashboard-body admin-body">
+    <canvas id="particles-canvas"></canvas>
+
+    <aside class="dashboard-sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <div class="logo-icon">IPÊ</div>
+                <span>Instituto IPÊ</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+                </svg>
+                <span>Dashboard</span>
+            </a>
+            <a href="admin.html" class="nav-item active">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M12 1l9 4v6c0 5.25-3.5 10.74-9 12-5.5-1.26-9-6.75-9-12V5l9-4z"/><circle cx="12" cy="12" r="3"/>
+                </svg>
+                <span>Administração</span>
+            </a>
+        </nav>
+
+        <a href="index.html" class="nav-item" id="logout-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/>
+            </svg>
+            <span>Sair</span>
+        </a>
+    </aside>
+
+    <main class="dashboard-main admin-main">
+        <header class="dashboard-header admin-header">
+            <div class="header-left">
+                <button class="menu-toggle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
+                <div class="header-welcome">
+                    <h1>Central Administrativa</h1>
+                    <p>Monitoramento em tempo real dos usuários e testes DISC</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="last-sync">
+                    <span>Última atualização</span>
+                    <strong id="admin-last-sync">--</strong>
+                </div>
+                <button class="btn-secondary" id="refresh-admin-data">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.13-3.36L23 10M1 14l5.37 4.37A9 9 0 0 0 20.49 15"/>
+                    </svg>
+                    Atualizar
+                </button>
+            </div>
+        </header>
+
+        <section class="admin-stats-grid">
+            <div class="admin-stat-card holographic-card">
+                <span>Total de usuários</span>
+                <strong id="admin-total-users">0</strong>
+                <small id="admin-users-growth">+0 hoje</small>
+            </div>
+            <div class="admin-stat-card holographic-card">
+                <span>Testes realizados</span>
+                <strong id="admin-total-tests">0</strong>
+                <small id="admin-tests-growth">+0 nesta semana</small>
+            </div>
+            <div class="admin-stat-card holographic-card">
+                <span>Último cadastro</span>
+                <strong id="admin-last-user">--</strong>
+                <small id="admin-last-user-date">--</small>
+            </div>
+            <div class="admin-stat-card holographic-card">
+                <span>Teste mais recente</span>
+                <strong id="admin-last-test">--</strong>
+                <small id="admin-last-test-date">--</small>
+            </div>
+        </section>
+
+        <section class="admin-card">
+            <div class="admin-card-header">
+                <div>
+                    <h2>Usuários cadastrados</h2>
+                    <p>Acompanhe novos cadastros e últimos testes realizados</p>
+                </div>
+                <div class="admin-card-actions">
+                    <button class="btn-secondary" id="export-users-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        Exportar CSV
+                    </button>
+                </div>
+            </div>
+            <div class="admin-table-wrapper">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Usuário</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Total de testes</th>
+                            <th>Último perfil</th>
+                            <th>Última atividade</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-users-body">
+                        <tr>
+                            <td colspan="6" class="table-placeholder">Carregando usuários...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="admin-card">
+            <div class="admin-card-header">
+                <div>
+                    <h2>Histórico de testes</h2>
+                    <p>Últimos envios e perfis DISC identificados</p>
+                </div>
+                <div class="admin-card-actions">
+                    <label class="admin-filter">
+                        <span>Limite</span>
+                        <select id="admin-tests-limit">
+                            <option value="25">25</option>
+                            <option value="50" selected>50</option>
+                            <option value="100">100</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            <div class="admin-table-wrapper">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Usuário</th>
+                            <th>Perfil</th>
+                            <th>Confiança</th>
+                            <th>Scores</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-tests-body">
+                        <tr>
+                            <td colspan="6" class="table-placeholder">Carregando testes...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="api-client.js"></script>
+    <script src="script.js"></script>
+    <script src="admin-script.js"></script>
+</body>
+
+</html>
+
